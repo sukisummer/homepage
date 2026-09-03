@@ -1,0 +1,27 @@
+body {
+    background-color: bisque;
+    font-size: 25px;
+}
+
+p {
+    font-size: 25px;
+    /*background-color: rgb(12, 228, 217);*/
+    color:rgb(52, 31, 3);
+
+    padding: 50px;
+    margin: 50px;
+     /*width: 200px;
+    height: 200px;
+    overflow: auto;*/
+    
+
+    /* border:10px solid black;*/
+
+
+    
+}
+
+.banner {
+    background-color: rgb(33, 135, 5);
+    text-align: center;
+}

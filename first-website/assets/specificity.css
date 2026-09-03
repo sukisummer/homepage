@@ -1,0 +1,36 @@
+body {
+    background-color: beige;
+}
+
+header {
+    background-color: rgb(231, 231, 105);
+    margin: 20px;
+    padding: 20px;
+}
+
+main {
+    background: yellow;
+    margin: 20px;
+    padding: 20px;
+
+}
+
+.class{
+    background-color: bisque;
+}
+
+#id{
+    background:yellowgreen
+
+}
+
+footer{
+    background:lightpink;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* 下面的代码会胜出 */
+footer{
+    background:lightseagreen
+}
