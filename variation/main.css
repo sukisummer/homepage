@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(210, 202, 181);
+    color: rgb(29, 38, 30);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(39, 55, 42);
+    color: white;
+    padding: 70px 10%;
+    border-bottom: 8px solid rgb(126, 48, 39);
+}
+
+h1 {
+    font-family: Impact, Arial, sans-serif;
+    font-size: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px rgb(126, 48, 39);
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 21px;
+    font-style: italic;
+    margin: 5px 0 0 0;
+}
+
+main {
+    width: 85%;
+    max-width: 1000px;
+    margin: 45px auto;
+}
+
+section {
+    background-color: rgb(239, 234, 217);
+    border: 2px solid rgb(65, 79, 64);
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 8px 8px rgb(106, 106, 87);
+}
+
+h2 {
+    background-color: rgb(56, 75, 58);
+    color: white;
+    display: inline-block;
+    padding: 8px 18px;
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0 25px 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 25px auto;
+    border: 6px solid rgb(56, 75, 58);
+    filter: sepia(20%);
+}
+
+ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: rgb(202, 194, 165);
+    border-left: 6px solid rgb(126, 48, 39);
+    flex: 1;
+    font-size: 17px;
+    padding: 18px;
+}
+
+details {
+    background-color: rgb(224, 217, 194);
+    padding: 18px;
+    margin-top: 20px;
+}
+
+summary {
+    color: rgb(112, 42, 35);
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+ol {
+    display: flex;
+    gap: 30px;
+    list-style-position: inside;
+    padding: 0;
+}
+
+ol li {
+    background-color: rgb(202, 194, 165);
+    flex: 1;
+    padding: 20px;
+}
+
+ol li p {
+    font-size: 16px;
+}
+
+footer {
+    background-color: rgb(39, 55, 42);
+    color: white;
+    padding: 35px 10%;
+}
+
+footer h2 {
+    background-color: transparent;
+    border-bottom: 2px solid rgb(178, 157, 118);
+    padding-left: 0;
+}
+
+a {
+    color: rgb(243, 207, 133);
+}
+
+a:hover {
+    color: white;
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 55px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    ul,
+    ol {
+        flex-direction: column;
+    }
+}
