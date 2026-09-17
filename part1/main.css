@@ -1,75 +1,206 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgb(0, 0, 0);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.9)),
+        url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: rgb(255, 255, 255);
-    font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
 }
 
 h1 {
+    color: white;
     font-family: Impact, Arial, sans-serif;
-    font-size:130px;
-    letter-spacing: 3px;
+    font-size: 130px;
+    letter-spacing: 5px;
     text-align: center;
+    text-shadow: 0 8px 25px black;
+    text-transform: uppercase;
+    margin: 70px 20px 40px 20px;
 }
 
 h2 {
-    background-color: white;
-    color: black;
-    border: 2px solid white;
-    padding: 10px 20px;
-    text-align: center;
-
+    background-color: rgba(18, 20, 19, 0.76);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-left: 6px solid white;
+    padding: 14px 24px;
+    text-align: left;
     width: fit-content;
-    margin: 40px auto 20px auto;
+    margin: 55px auto 25px auto;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(7px);
 }
 
 p {
     font-size: 18px;
-    padding: 50px;
-    margin: 50px;
+    line-height: 1.7;
 }
 
-
-ol {
-    font-size: 20px;
-    text-align: center;
-    list-style-position: inside;
-    padding-left: 0;
+body > p,
+body > ul,
+body > ol,
+body > details {
+    background-color: rgba(16, 18, 17, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(7px);
+    width: 80%;
+    max-width: 900px;
+    margin: 25px auto 70px auto;
+    padding: 30px;
 }
-ul {
+
+body > ul {
     font-size: 18px;
-
+    line-height: 2;
+    list-style-position: inside;
 }
 
-ol li details {
-    display: inline-block;
-    vertical-align: top;
+body > ol {
+    font-size: 20px;
+    list-style: none;
 }
 
 ol li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
     margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
-img {
+ol li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+ol li details {
     display: block;
-    margin: 20px auto;
 }
 
-.banner {
-    text-align: center;
+details {
+    color: white;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+details p {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 20px 0 0 0;
+    padding: 0;
 }
 
 ol summary {
+    background-color: rgba(30, 33, 31, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 20px;
     list-style: none;
-    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 9px 18px;
+    text-align: center;
 }
 
 ol summary::-webkit-details-marker {
     display: none;
 }
 
-
+img {
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 30px auto;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
 
 a {
     color: rgb(255, 255, 255);
+    text-decoration-color: rgba(255, 255, 255, 0.55);
+}
+
+a:hover {
+    color: rgb(190, 210, 190);
+}
+
+.ui-gallery {
+    margin: 70px 0;
+}
+
+.ui-intro {
+    background-color: rgba(16, 18, 17, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(7px);
+    width: 80%;
+    max-width: 900px;
+    margin: 25px auto 50px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.ui-card {
+    background-color: rgba(16, 18, 17, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(7px);
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 25px;
+    text-align: center;
+}
+
+.ui-card img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 25px auto;
+}
+
+.ui-card h3 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.ui-card p {
+    max-width: 760px;
+    margin: 15px auto 5px auto;
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 70px;
+    }
+
+    body > p,
+    body > ul,
+    body > ol,
+    body > details {
+        width: 90%;
+        padding: 22px;
+    }
+
+    .ui-intro,
+    .ui-card {
+        width: 90%;
+        padding: 18px;
+    }
 }
