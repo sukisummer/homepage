@@ -1,0 +1,106 @@
+<!doctype html>
+<!-- 这是 HTML 网页；lang="en" 表示页面上显示的内容主要是英文。 -->
+<html lang="en">
+    <head>
+        <!-- UTF-8 字符编码：让英文、中文和其他字符正常显示。 -->
+        <meta charset="UTF-8">
+        <!-- 响应式的基础设置：让手机浏览器按设备宽度显示网页，初始缩放比例是 1。 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 浏览器标签页上的名字，不是画面中显示的大标题。 -->
+        <title>Now Hiring! | Smallfry Rain</title>
+        <!-- 引入 main.css：页面的颜色、位置、尺寸和动画都写在这个 CSS 文件里。 -->
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <!-- 整个屏保的舞台。aria-label 给使用读屏工具的人说明画面内容。 -->
+        <main class="screensaver" aria-label="Small fish fall from the sky and bounce along the bottom of the screen.">
+            <!-- 标题区：熊老板的公司名、招工标题，以及一行说明。 -->
+            <header class="title">
+                <!-- GRIZZCO INDUSTRIES：熊老板公司的英文名字。 -->
+                <p class="eyebrow">GRIZZCO INDUSTRIES</p>
+                <!-- Now Hiring!：正在招工！br 让标题换行，span 让 Hiring! 可以单独设置颜色。 -->
+                <h1>Now<br><span>Hiring!</span></h1>
+                <!-- 说明文字：正在为 Salmon Run 招工。 -->
+                <p class="description">Now hiring for Salmon Run jobs!</p>
+            </header>
+
+            <!-- 两个空心圆：空 div 没有文字，由 CSS 的边框和圆角画出来。
+                 sky-ring 是共同样式，ring-one、ring-two 分别设置大小和位置。
+                 aria-hidden="true" 表示装饰元素不需要让读屏工具重复朗读。 -->
+            <div class="sky-ring ring-one" aria-hidden="true"></div>
+            <div class="sky-ring ring-two" aria-hidden="true"></div>
+            <!-- 两个实心小点：同样用空 div，由 CSS 设置圆角和背景色。 -->
+            <div class="sky-dot dot-one" aria-hidden="true"></div>
+            <div class="sky-dot dot-two" aria-hidden="true"></div>
+            <!-- 半颗蛋太阳：导入整张金蛋 PNG，鱼骨头已经画在图片里面。
+                 这里只用 CSS 缩放、摆放和遮挡图片，不重新绘制鱼骨头。
+                 alt="" 表示它是装饰图片，不另外添加朗读文字。 -->
+            <img class="golden-egg" src="golden-egg.png" alt="">
+            <!-- 底部海面：一块有颜色的长方形，也用来遮住金蛋下半部分。 -->
+            <div class="ground" aria-hidden="true"></div>
+
+            <!-- 第一条鱼：用四层分别负责横移、掉落、弹跳、翻面。
+                 分层是为了让多个 transform 动作可以同时播放，不互相覆盖。
+                 HTML 负责放好结构，具体动作由 CSS 的 animation 和 @keyframes 完成。 -->
+            <div class="fish-track fish-one" aria-hidden="true">
+                <!-- 外层 fish-track 负责左右移动；这一层 fall 负责第一次从天上掉下来。 -->
+                <div class="fall">
+                    <!-- hop 层负责掉落之后不停上下弹跳。 -->
+                    <div class="hop">
+                        <!-- 图片本身是 PNG；fish-image 的动画负责左右翻面。 -->
+                        <img class="fish-image" src="smallfry.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- 第二条鱼：结构与第一条相同，通过 fish-two 在 CSS 里单独调整参数。 -->
+            <div class="fish-track fish-two" aria-hidden="true">
+                <div class="fall"><div class="hop">
+                    <img class="fish-image" src="smallfry.png" alt="">
+                </div></div>
+            </div>
+            <!-- 第三条鱼：同一张 PNG，不同大小、出场时间、移动和弹跳速度。 -->
+            <div class="fish-track fish-three" aria-hidden="true">
+                <div class="fall"><div class="hop">
+                    <img class="fish-image" src="smallfry.png" alt="">
+                </div></div>
+            </div>
+            <!-- 第四条鱼：较小，使用低跳动作。 -->
+            <div class="fish-track fish-four" aria-hidden="true">
+                <div class="fall"><div class="hop">
+                    <img class="fish-image" src="smallfry.png" alt="">
+                </div></div>
+            </div>
+            <!-- 第五条鱼：较大，使用普通高度的弹跳。 -->
+            <div class="fish-track fish-five" aria-hidden="true">
+                <div class="fall"><div class="hop">
+                    <img class="fish-image" src="smallfry.png" alt="">
+                </div></div>
+            </div>
+            <!-- 第六条鱼：比前面的鱼晚出场，参数写在 CSS 的 fish-six 那一组。 -->
+            <div class="fish-track fish-six" aria-hidden="true">
+                <div class="fall"><div class="hop">
+                    <img class="fish-image" src="smallfry.png" alt="">
+                </div></div>
+            </div>
+            <!-- 第七条鱼：最小，使用低跳动作。 -->
+            <div class="fish-track fish-seven" aria-hidden="true">
+                <div class="fall"><div class="hop">
+                    <img class="fish-image" src="smallfry.png" alt="">
+                </div></div>
+            </div>
+            <!-- 第八条鱼：最后出场，使用高跳动作。 -->
+            <div class="fish-track fish-eight" aria-hidden="true">
+                <div class="fall"><div class="hop">
+                    <img class="fish-image" src="smallfry.png" alt="">
+                </div></div>
+            </div>
+
+            <!-- 页脚：左边是 GRIZZCO / SALMON RUN，右边的文字意思是“下一班可以等等”。
+                 CSS 用 flex 把它们分别排在左边与右边。 -->
+            <footer class="caption">
+                <span>GRIZZCO / SALMON RUN</span>
+                <span>YOUR NEXT SHIFT CAN WAIT.</span>
+            </footer>
+        </main>
+    </body>
+</html>
